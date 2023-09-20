@@ -1,0 +1,20 @@
+print('Olá, bem vindo ao cálculo de fretes')
+valor = float(input('Entre com o valor desejado: '))
+quantidade = int(input('Quantas unidades do produto está levando?: '))
+if quantidade <= 10: #PARA VALORES ATÉ 10
+    total = valor * quantidade
+    total2 = total + 30
+    print('o custo sem o frete é de R$: {:.2F} e o custo total é de R$: {:.2F}'.format(total, total2))
+elif quantidade > 10 and quantidade < 101: #PARA VALORES DE 11 A 100
+    total = valor * quantidade
+    total2 = total + 60
+    print('o custo sem o frete é de R$: {:.2F} e o custo total é de R$: {:.2F}'.format(total, total2))
+elif quantidade > 100 and quantidade <= 1000: #PARA VALORES DE 101 A 1000
+    total = valor * quantidade
+    total2 = total + 120
+    print('o custo sem o frete é de R$: {:.2F} e o custo total é de R$: {:.2F}'.format(total, total2))
+else:
+    quantidade >= 1001 #PARA VALORES MAIORES QUE OU IGUAIS A 1001
+    total = valor * quantidade
+    total2 = total + 240
+    print('o custo sem o frete é de R$: {:.2F} e o custo total é de R$: {:.2F}'.format(total, total2))
